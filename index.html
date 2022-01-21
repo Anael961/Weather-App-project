@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>weatherapp</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Source+Code+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/0fd35d98c5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form id="search-input">
+        <div class="row">
+          <div class="col-6">
+            <input
+              type="search"
+              placeholder="Enter a location"
+              class="form-control"
+              id="input-value"
+            />
+          </div>
+          <div class="col-3">
+            <input
+              type="submit"
+              value="Search"
+              class="form-control btn btn-outline-secondary"
+            />
+          </div>
+          <div class="col-3">
+            <button
+              class="btn btn-outline-secondary w-100 current-location"
+              id="current-location-button"
+            >
+              Current
+            </button>
+          </div>
+        </div>
+      </form>
+      <h1 id="city"></h1>
+      <h2>
+        <span class="maintemp" id="placeholder-temp"> </span>
+        <span class="tempunits">
+          <a href="#" id="celcius-temp">°C</a> |
+          <a href="#" id="fahrenheit-temp">°F</a>
+        </span>
+      </h2>
+      <img src="src/images/morning_sunny_icon.png" alt="" />
+      <h3>Sunday, 2:30PM</h3>
+      <div class="row todays-highlights">
+        <div class="col">
+          Wind
+          <br />
+          <span id="wind">23</span>km/h
+        </div>
+        <div class="col">
+          Humidity
+          <br />
+          <span id="humidity">59</span>%
+        </div>
+        <div class="col">
+          Precipitation
+          <br />
+          <span id="precipitation">1</span>%
+        </div>
+      </div>
+      <hr />
+      <div class="row forecast">
+        <div class="col">
+          Mon
+          <br />
+          ⛅
+          <br />
+          4°C
+        </div>
+        <div class="col">
+          Tue
+          <br />
+          ⛅
+          <br />
+          0°C
+        </div>
+        <div class="col">
+          Wed
+          <br />
+          ⛅
+          <br />
+          2°C
+        </div>
+        <div class="col">
+          Thu
+          <br />
+          🌨️
+          <br />
+          1°C
+        </div>
+        <div class="col">
+          Fri
+          <br />
+          🌦️
+          <br />
+          3°C
+        </div>
+        <div class="col">
+          Sat
+          <br />
+          🌨️
+          <br />
+          7°C
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
