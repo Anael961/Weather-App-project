@@ -62,3 +62,10 @@ hr {
   margin: 20px auto;
   padding-bottom: 10px;
 }
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+.footer {
+  color: #000;
+}
