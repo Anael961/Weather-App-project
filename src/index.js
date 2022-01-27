@@ -28,8 +28,8 @@ function showTemperature(response) {
     response.data.wind.speed
   );
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#precipitation").innerHTML =
-    response.data.main.precipitation;
+  document.querySelector("#description").innerHTML =
+    response.data.weather.description;
 }
 
 function searchcity(city) {
