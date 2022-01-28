@@ -28,6 +28,9 @@ function showTemperature(response) {
     response.data.wind.speed
   );
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#feels_like").innerHTML = Math.round(
+    response.data.main.feels_like
+  );
   document.querySelector("#description").innerHTML =
     response.data.weather.description;
 }
