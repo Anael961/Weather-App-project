@@ -32,7 +32,7 @@ function showTemperature(response) {
     response.data.main.feels_like
   );
   document.querySelector("#description").innerHTML =
-    response.data.weather.description;
+    response.data.weather[0].description;
 }
 
 function searchcity(city) {
