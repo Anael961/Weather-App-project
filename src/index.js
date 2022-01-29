@@ -1,5 +1,9 @@
-function formatDate(date) {
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
   let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
   let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
@@ -33,6 +37,10 @@ function showTemperature(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
+
+  document.querySelector("#date").innerHTML = formatDate(
+    response.data.dt * 1000
+  );
 }
 
 function searchcity(city) {
@@ -76,11 +84,6 @@ function toCelcius(event) {
   let celciusTemp = document.querySelector("#placeholder-temp");
   celciusTemp.innerHTML = -3;
 }
-
-//day and time
-let h3 = document.querySelector("h3");
-let currentTime = new Date();
-h3.innerHTML = formatDate(currentTime);
 
 //city search input
 let form = document.querySelector("#search-input");
