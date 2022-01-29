@@ -49,6 +49,13 @@ li {
   top: -42px;
   right: 35px;
 }
+.active {
+  color: #fff;
+  cursor: default;
+}
+.active:hover {
+  text-decoration: none;
+}
 img {
   width: 150px;
   margin-top: -15px;

@@ -41,6 +41,8 @@ function showTemperature(response) {
   document.querySelector("#date").innerHTML = formatDate(
     response.data.dt * 1000
   );
+
+  celciusTemp = response.data.main.temp;
 }
 
 function searchcity(city) {
@@ -76,14 +78,23 @@ function getCurrentLocation(event) {
 
 function toFahrenheit(event) {
   event.preventDefault();
-  let fahrenheitTemp = document.querySelector("#placeholder-temp");
-  fahrenheitTemp.innerHTML = 25;
+  celciusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+
+  let maintemp = document.querySelector("#placeholder-temp");
+  let fahrenheitTemp = (celciusTemp * 9) / 5 + 32;
+  maintemp.innerHTML = Math.round(fahrenheitTemp);
 }
 function toCelcius(event) {
   event.preventDefault();
-  let celciusTemp = document.querySelector("#placeholder-temp");
-  celciusTemp.innerHTML = -3;
+  celciusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+
+  let maintemp = document.querySelector("#placeholder-temp");
+  maintemp.innerHTML = Math.round(celciusTemp);
 }
+
+let celciusTemp = null;
 
 //city search input
 let form = document.querySelector("#search-input");
@@ -93,13 +104,13 @@ form.addEventListener("submit", locationInput);
 let currentlocation = document.querySelector("#current-location-button");
 currentlocation.addEventListener("click", getCurrentLocation);
 
-// default city
-searchcity("Toronto");
+//celcius to fahrenheit
+let celciusLink = document.querySelector("#celcius-temp");
+celciusLink.addEventListener("click", toCelcius);
 
 //fahrenheit to celcius
 let fahrenheitLink = document.querySelector("#fahrenheit-temp");
 fahrenheitLink.addEventListener("click", toFahrenheit);
 
-//celcius to fahrenheit
-let celciusLink = document.querySelector("#celcius-temp");
-celciusLink.addEventListener("click", toCelcius);
+// default city
+searchcity("Toronto");
