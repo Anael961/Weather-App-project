@@ -29,21 +29,21 @@
           <input
             type="search"
             placeholder="Search for a city"
-            class="form-control py-2"
+            class="form-control py-2 border-right-0 border"
             id="input-value"
           />
           <span class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button">
+            <button
+              class="btn btn-outline-secondary border-left-0 border"
+              type="button"
+            >
               <i class="fa fa-search"></i>
             </button>
           </span>
         </div>
-        <span class="col-md-4">
-          <button
-            class="btn btn-outline-secondary w-100 current-location"
-            id="current-location-button"
-          >
-            Current
+        <span class="col-md-4 marker-outline">
+          <button class="location-marker" id="current-location-button">
+            <i class="fas fa-map-marker-alt"></i>
           </button>
         </span>
       </div>

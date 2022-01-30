@@ -18,14 +18,28 @@ body {
 .input-group {
   position: relative;
   top: 1px;
-  width: 65%;
+  width: 75%;
   align-items: center;
 }
 .input-group .btn {
   line-height: 28px;
+  background-color: #fff;
+  transition: ease-in-out;
 }
-.current-location {
-  border-radius: 20px;
+.input-group .btn:hover {
+  color: #6c757d;
+}
+.marker-outline {
+  width: 16%;
+}
+.location-marker {
+  color: #6c757d;
+  border: 1px solid transparent;
+  background-color: transparent;
+  font-size: 20px;
+  line-height: 28px;
+  position: relative;
+  top: 5px;
 }
 h1 {
   margin-top: 20px;
