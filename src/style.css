@@ -81,13 +81,14 @@ li {
 .active:hover {
   text-decoration: none;
 }
-img {
-  width: 225px;
-  margin-top: -60px;
+.main-icon {
+  width: 250px;
+  margin-top: -80px;
   margin-bottom: -8px;
 }
 h3 {
-  margin-top: -30px;
+  margin-top: -40px;
+  margin-bottom: 15px;
   font-weight: 400;
 }
 .weather-description {
@@ -100,10 +101,20 @@ h3 {
 hr {
   margin: 0 50px;
 }
-.forecast {
-  font-size: 20px;
-  margin: 20px auto;
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
   padding-bottom: 10px;
+}
+.weather-forecast-date {
+  font-size: 20px;
+}
+.weather-forecast-temperature-max {
+  font-size: 17px;
+}
+.weather-forecast-temperature-min {
+  font-size: 17px;
+  opacity: 0.6;
 }
 a {
   color: #007bff;
