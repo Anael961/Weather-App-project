@@ -22,6 +22,32 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Fri", "Sat", "Sun", "Mon", "Tue", "Wed"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` <div class="col-2">
+            <div class="weather-forecast-date">${day}</div>
+            <img
+              src="http://openweathermap.org/img/wn/01d@2x.png"
+              alt=""
+              width="45"
+            />
+            <div class="weather-forecast-temperature">
+              <span class="weather-forecast-temperature-max">6°</span>
+              <span class="weather-forecast-temperature-min">4°</span>
+          </div>
+        </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showTemperature(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#placeholder-temp").innerHTML = Math.round(
@@ -119,3 +145,6 @@ fahrenheitLink.addEventListener("click", toFahrenheit);
 
 // default city
 searchcity("Toronto");
+
+// forecast
+displayForecast();
