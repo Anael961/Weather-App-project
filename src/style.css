@@ -1,9 +1,9 @@
 body {
-  max-width: 460px;
+  max-width: 470px;
   font-family: Maven Pro, sans-serif;
   text-align: center;
   color: #fff;
-  margin: 120px auto;
+  margin: 61px auto;
 }
 .container {
   background: #6ea9c7;
@@ -107,14 +107,15 @@ hr {
   padding-bottom: 10px;
 }
 .weather-forecast-date {
-  font-size: 20px;
+  font-size: 18px;
 }
 .weather-forecast-temperature-max {
-  font-size: 17px;
+  font-size: 15px;
+  font-weight: 600;
 }
 .weather-forecast-temperature-min {
-  font-size: 17px;
-  opacity: 0.6;
+  font-size: 15px;
+  opacity: 0.8;
 }
 a {
   color: #007bff;
