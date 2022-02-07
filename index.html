@@ -24,30 +24,30 @@
   </head>
   <body>
     <div class="container py-2">
-      <div class="row">
-        <div class="input-group col-md-4" id="search-input">
-          <input
-            type="search"
-            placeholder="Search for a city"
-            class="form-control py-2 border-right-0 border"
-            id="input-value"
-            autocomplete="off"
-          />
-          <span class="input-group-append">
+      <form id="search-input">
+        <div class="row">
+          <div class="input-group">
+            <input
+              type="search"
+              class="form-control py-2 border-right-0 border"
+              placeholder="search for a city"
+              id="input-value"
+              autocomplete="off"
+            />
             <button
               class="btn btn-outline-secondary border-left-0 border"
-              type="button"
+              type="submit"
             >
               <i class="fa fa-search"></i>
             </button>
-          </span>
+          </div>
         </div>
-        <span class="col-md-4 marker-outline">
-          <button class="location-marker" id="current-location-button">
-            <i class="fas fa-map-marker-alt"></i>
-          </button>
-        </span>
-      </div>
+      </form>
+      <span class="col-md-4 marker-outline">
+        <button class="location-marker" id="current-location-button">
+          <i class="fas fa-map-marker-alt"></i>
+        </button>
+      </span>
       <h1 id="city"></h1>
       <div class="row">
         <div class="col-6">
