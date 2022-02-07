@@ -68,7 +68,6 @@ function displayForecast(response) {
 }
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = "400257005fd84b55505351ed05840af2";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
@@ -134,26 +133,6 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
-function toFahrenheit(event) {
-  event.preventDefault();
-  celciusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-
-  let maintemp = document.querySelector("#placeholder-temp");
-  let fahrenheitTemp = (celciusTemp * 9) / 5 + 32;
-  maintemp.innerHTML = Math.round(fahrenheitTemp);
-}
-function toCelcius(event) {
-  event.preventDefault();
-  celciusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-
-  let maintemp = document.querySelector("#placeholder-temp");
-  maintemp.innerHTML = Math.round(celciusTemp);
-}
-
-let celciusTemp = null;
-
 //city search input
 let form = document.querySelector("#search-input");
 form.addEventListener("click", locationInput);
@@ -161,14 +140,6 @@ form.addEventListener("click", locationInput);
 // current location
 let currentlocation = document.querySelector("#current-location-button");
 currentlocation.addEventListener("click", getCurrentLocation);
-
-//celcius to fahrenheit
-let celciusLink = document.querySelector("#celcius-temp");
-celciusLink.addEventListener("click", toCelcius);
-
-//fahrenheit to celcius
-let fahrenheitLink = document.querySelector("#fahrenheit-temp");
-fahrenheitLink.addEventListener("click", toFahrenheit);
 
 // default city
 searchcity("Toronto");

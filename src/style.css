@@ -14,26 +14,32 @@ body {
 .form-control {
   outline: 0;
   box-shadow: none;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 .border {
   border: 0px !important;
 }
 .input-group {
   position: relative;
-  top: 1px;
+  top: 5px;
   width: 75%;
   align-items: center;
+  margin-left: 51px;
+}
+.input-group-append {
+  margin-left: -3px !important;
 }
 .input-group .btn {
   line-height: 28px;
   background-color: #fff;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 .input-group .btn:hover {
   background-color: #6c757d;
 }
 .marker-outline {
-  width: 22%;
+  width: 11%;
 }
 .location-marker {
   color: #6c757d;
@@ -42,10 +48,10 @@ body {
   font-size: 20px;
   line-height: 28px;
   position: relative;
-  top: 7px;
+  top: 10px;
 }
 h1 {
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 15px;
   font-weight: normal;
   font-size: 30px;
@@ -83,7 +89,7 @@ li {
 }
 .main-icon {
   width: 250px;
-  margin-top: -80px;
+  margin-top: -91px;
   margin-bottom: -8px;
 }
 h3 {
