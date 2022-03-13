@@ -82,13 +82,6 @@ li {
   top: -42px;
   right: 35px;
 }
-.active {
-  color: #fff;
-  cursor: default;
-}
-.active:hover {
-  text-decoration: none;
-}
 .main-icon {
   width: 250px;
   margin-top: -91px;
